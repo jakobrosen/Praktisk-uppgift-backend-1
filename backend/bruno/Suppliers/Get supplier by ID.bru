@@ -1,0 +1,24 @@
+meta {
+  name: Get supplier by ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/api/suppliers/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+headers {
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

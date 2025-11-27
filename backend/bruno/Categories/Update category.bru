@@ -1,0 +1,30 @@
+meta {
+  name: Update category
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/api/categories/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 45
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "testostero34n"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

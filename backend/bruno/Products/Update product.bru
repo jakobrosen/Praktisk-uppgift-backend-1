@@ -1,0 +1,31 @@
+meta {
+  name: Update product
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/api/products/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+body:json {
+  {
+    "name": "756765",
+    "price": 245,
+    "weight": 234,
+    "amount": 65,
+    "category_id": 9,
+    "supplier_id": 9
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

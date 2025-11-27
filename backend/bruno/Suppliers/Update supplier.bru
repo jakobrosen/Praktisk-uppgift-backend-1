@@ -1,0 +1,34 @@
+meta {
+  name: Update supplier
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:3000/api/suppliers/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Test supplier2",
+    "contact": "24",
+    "email": "25243",
+    "country": "100",
+    "phone": "32f1"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

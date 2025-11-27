@@ -1,0 +1,27 @@
+meta {
+  name: Create new product
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/products
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "tesgdsgsddsgt2",
+    "price": 24,
+    "weight": 25,
+    "amount": 100,
+    "category_id": 45,
+    "supplier_id": 3
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

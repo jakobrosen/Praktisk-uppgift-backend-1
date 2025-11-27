@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Inventorio</title>
+</head>
+<body>
+<header>
+  <div class="top-bar">
+    <div class="top-bar-search">
+      <img src="../icons/search.svg">
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="window-control-buttons">
+      <button id="minimize-btn"><img src="../icons/minimize.png"></button>
+      <button id="maximize-btn"><img src="../icons/maximize.png"></button>
+      <button id="close-btn"><img src="../icons/close.png"></button>
+    </div>
+  </div>
+</header>
+<nav>
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="../images/logo.png">
+      <h1>Inventorio</h1>
+    </div>
+    <ul>
+      <li class="nav-btn" id="nav-dashboard-btn"><img src="../icons/dashboard.png"><a>Dashboard</a></li>
+      <li class="nav-btn" id="nav-products-btn"><img src="../icons/products.png"><a>Products</a></li>
+      <li class="nav-btn" id="nav-categories-btn"><img src="../icons/categories.png"><a>Categories</a></li>
+      <li class="nav-btn" id="nav-suppliers-btn"><img src="../icons/suppliers.png"><a>Suppliers</a></li>
+      <li class="nav-btn" id="nav-add-btn"><img src="../icons/add.png"><a>Add</a><img id="add-downarrow" src="../icons/downarrow.png"><img id="add-uparrow" src="../icons/uparrow.png"></li>
+      <ul id="nav-add-dropdown">
+        <li class="nav-btn" id="nav-new-product-btn"><a>New product</a></li>
+        <li class="nav-btn" id="nav-new-categories-btn"><a>New category</a></li>
+        <li class="nav-btn" id="nav-new-supplier-btn"><a>New supplier</a></li>
+      </ul>
+      <li class="nav-btn" id="nav-reports-btn"><img src="../icons/reports.png"><a>Reports</a></li>
+      <li class="nav-btn" id="nav-settings-btn"><img src="../icons/settings.png"><a>Settings</a></li>
+    </ul>
+  </aside>
+</nav>
+<main>
+  <div id="main-content"></div>
+</main>
+<script src="elements.js"></script>
+<script src="functions.js"></script>
+<script src="renderer.js"></script>
+</body>
+</html>

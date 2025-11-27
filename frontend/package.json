@@ -1,0 +1,16 @@
+{
+  "name": "ims",
+  "version": "1.0.0",
+  "description": "Inventory Management System using Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon --ext js,css,html --exec electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jakob Rosén",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^39.1.2",
+    "nodemon": "^3.1.11"
+  }
+}

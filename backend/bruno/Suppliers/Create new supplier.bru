@@ -1,0 +1,30 @@
+meta {
+  name: Create new supplier
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/suppliers
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "Grusman AB",
+    "contact": "Göran Grusman",
+    "email": "grusman@grusman",
+    "country": "Sverige",
+    "phone": "+46-543 346 32"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

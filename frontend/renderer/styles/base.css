@@ -1,0 +1,35 @@
+:root {
+  --bgcolor-1: #101622;
+  --bgcolor-2: #eeeeee;
+  --bgcolor-3: #f5f5f5;
+  --accentcolor-1: #00306b;
+  --accentcolor-2: #004ad4;
+  --txtcolor-1: #e3e3e3;
+  --txtcolor-2: #ababab;
+  --txtcolor-3: #0f0f0f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bgcolor-2);
+}
+
+h1 {
+  font-family: 'Baloo Tamma 2';
+  font-weight: 100;
+  font-size: 1.7rem;
+  color: var(--txtcolor-1);
+}
+
+h2, h3, h4, h5 {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: var(--txtcolor-3);
+}
+
+p {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: var(--txtcolor-3);
+}
