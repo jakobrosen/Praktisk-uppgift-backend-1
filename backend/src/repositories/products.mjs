@@ -28,7 +28,7 @@ export async function getAllProducts() {
         `);
 
     if (!result.rowCount) {
-        throw new Error("Failed to retrieve products");
+        return [];
     }
 
     return result.rows;

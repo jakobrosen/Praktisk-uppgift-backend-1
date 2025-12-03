@@ -170,7 +170,7 @@ router.delete("/products/:id", async (req, res) => {
 
     const deletedProduct = await deleteProduct(id);
     if (!deletedProduct) {
-        res.status(404).json({ error: `Could not find product with ID: ${parsedProduct.id}.` });
+        res.status(404).json({ error: `Could not find product with ID: ${id}.` });
         return;
     }
 
