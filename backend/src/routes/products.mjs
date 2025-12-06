@@ -60,6 +60,9 @@ router.post("/products", async (req, res) => {
                     break;
             }
         }
+        else if (error.message === "Failed to insert product into database") {
+            res.status(500).json({ error: error.message })
+        }
         else {
             console.log(error);
             res.status(500).json({ error: "Unexpected server error" });

@@ -11,7 +11,7 @@ export async function createCategory(category) {
     const result = await pool.query("INSERT INTO categories (name) VALUES ($1) RETURNING *", [category.name]);
 
     if (result.rowCount !== 1) {
-        throw new Error("Failed to insert category");
+        throw new Error("Failed to insert category into database");
     }
 
     return result.rows[0];
@@ -31,7 +31,7 @@ export async function getAllCategories() {
         `);
 
     if (!result.rowCount) {
-        throw new Error("Failed to retrieve categories");
+        return [];
     }
 
     return result.rows;

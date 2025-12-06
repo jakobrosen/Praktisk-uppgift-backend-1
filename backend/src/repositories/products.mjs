@@ -8,7 +8,7 @@ export async function createProduct(product) {
         [product.name, product.price, product.weight, product.amount, product.category_id, product.supplier_id]);
 
     if (result.rowCount !== 1) {
-        throw new Error("Failed to insert product");
+        throw new Error("Failed to insert product into database");
     }
 
     return result.rows[0];

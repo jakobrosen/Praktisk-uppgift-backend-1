@@ -154,6 +154,9 @@ router.put("/suppliers/:id", async (req, res) => {
                     break;
             }
         }
+        else if (error.message === "Failed to insert supplier into database") {
+            res.status(500).json({ error: error.message })
+        }
         else {
             console.log(error);
             res.status(500).json({ error: "Unexpected server error" });

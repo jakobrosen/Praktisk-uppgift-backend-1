@@ -38,6 +38,9 @@ router.post("/categories", async (req, res) => {
         if (error.code === "23505") {
             res.status(409).json({ error: `A category with the name '${parsedCategory.name}' already exists.` });
         }
+        else if (error.message === "Failed to insert category into database") {
+            res.status(500).json({ error: error.message })
+        }
         else {
             console.log(error);
             res.status(500).json({ error: "Unexpected server error" });

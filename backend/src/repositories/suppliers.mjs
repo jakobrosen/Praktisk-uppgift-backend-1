@@ -14,7 +14,7 @@ export async function createSupplier(supplier) {
         [supplier.name, supplier.contact, supplier.email, supplier.country, supplier.phone]);
 
     if (result.rowCount !== 1) {
-        throw new Error("Failed to insert supplier");
+        throw new Error("Failed to insert supplier into database");
     }
 
     return result.rows[0];
@@ -34,7 +34,7 @@ export async function getAllSuppliers() {
         `);
 
     if (!result.rowCount) {
-        throw new Error("Failed to retrieve suppliers");
+        return [];
     }
 
     return result.rows;
